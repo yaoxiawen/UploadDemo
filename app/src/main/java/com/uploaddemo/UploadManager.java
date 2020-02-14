@@ -115,7 +115,7 @@ public class UploadManager {
                     String message;
                     String url = "";
                     try {
-                        JSONObject jsonObject = JSON.parseObject(response.body().toString());
+                        JSONObject jsonObject = JSON.parseObject(response.body().string());
                         code = jsonObject.getIntValue("code");
                         message = jsonObject.getString("message");
                         if (jsonObject.containsKey("result")) {
